@@ -1,0 +1,11 @@
+Test with Jest
+
+Testing the Math Object - hint: you don't have to use the Match Object
+Add
+Subtract
+Divide
+Multiply
+
+Advanced Math - use Math Object
+square root
+maximum number - takes two numbers and returns the maximum number

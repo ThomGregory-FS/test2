@@ -2,7 +2,7 @@ const express = require("express");
 require("dotenv").config();
 const app = express();
 
-app.get("/", (req, res, next) => {
+app.get("/:id", (req, res, next) => {
   const { port } = process.env;
   res.json({
     message: "Using GET /",
@@ -10,11 +10,12 @@ app.get("/", (req, res, next) => {
       port, // port: process.env.port
       method: req.method,
       host: req.headers.host,
+      id: req.params.id
     },
   });
 });
 
-app.post("/", (req, res, next) => {
+app.post("/:id", (req, res, next) => {
   const { port } = process.env;
   res.json({
     message: "Using POST /",
@@ -22,11 +23,12 @@ app.post("/", (req, res, next) => {
       port, // port: process.env.port
       method: req.method,
       host: req.headers.host,
+      id: req.params.id
     },
   });
 });
 
-app.patch("/", (req, res, next) => {
+app.patch("/:id", (req, res, next) => {
   const { port } = process.env;
   res.json({
     message: "Using PATCH /",
@@ -34,11 +36,12 @@ app.patch("/", (req, res, next) => {
       port, // port: process.env.port
       method: req.method,
       host: req.headers.host,
+      id: req.params.id
     },
   });
 });
 
-app.delete("/", (req, res, next) => {
+app.delete("/:id", (req, res, next) => {
   const { port } = process.env;
   res.json({
     message: "Using DELETE /",
@@ -46,6 +49,7 @@ app.delete("/", (req, res, next) => {
       port, // port: process.env.port
       method: req.method,
       host: req.headers.host,
+      id: req.params.id
     },
   });
 });

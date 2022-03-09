@@ -13,4 +13,5 @@ describe("Testing the string module", () => {
     test("Should lowercase a string input", () => {
         expect(lowercase("FULL SaiL")).toBe("full sail");
     })
+
 });
